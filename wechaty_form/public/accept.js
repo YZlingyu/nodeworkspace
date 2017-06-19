@@ -13,7 +13,7 @@ function acceptIt(x){
     console.log(datatosend1);
     $.ajax({
         type: "get",
-        url: 'http://192.168.1.112:8081/accept_get',
+        url: 'http://192.168.99.1:8081/accept_get',
         crossDomain: true,
         dataType: "json",
         data:datatosend1,
@@ -33,7 +33,7 @@ function acceptIt(x){
     });
     $.ajax({
         type: "get",
-        url: 'http://192.168.1.112:8081/status_get',
+        url: 'http://192.168.99.1:8081/status_get',
         crossDomain: true,
         dataType: "json",
         data:{status:1},
@@ -66,7 +66,7 @@ function refuseIt(x){
     console.log(datatosend2);
     $.ajax({
         type: "get",
-        url: 'http://192.168.1.112:8081/status_get',
+        url: 'http://192.168.99.1:8081/status_get',
         crossDomain: true,
         dataType: "json",
         data:{status:2},
@@ -86,7 +86,7 @@ function refuseIt(x){
     });
     $.ajax({
         type: "get",
-        url: 'http://192.168.1.112:8081/accept_get',
+        url: 'http://192.168.99.1:8081/accept_get',
         crossDomain: true,
         dataType: "json",
         data:datatosend2,
@@ -108,7 +108,7 @@ function refuseIt(x){
 $(function(){
     $.ajax({
         type: "get",
-        url: 'http://192.168.1.112:8081/check_get',
+        url: 'http://192.168.99.1:8081/check_get',
         crossDomain: true,
         dataType: "json",
         success: function (data) {
